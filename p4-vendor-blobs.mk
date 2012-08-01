@@ -16,14 +16,14 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
-    vendor/samsung/p4/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
+    vendor/samsung/p4/proprietary/lib/libarccamera.so:obj/lib/libarccamera.so \
     vendor/samsung/p4/proprietary/lib/libaudio.so:obj/lib/libaudio.so \
     vendor/samsung/p4/proprietary/lib/libaudiopolicy.so:obj/lib/libaudiopolicy.so \
-    vendor/samsung/p4/proprietary/lib/libseccameraadaptor.so:obj/lib/libseccameraadaptor.so
+    vendor/samsung/p4/proprietary/lib/libseccamera_jni.so:obj/lib/libseccamera_jni.so \
+    vendor/samsung/p4/proprietary/lib/libseccameracore.so:obj/lib/libseccameracore.so
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/bin/gpsd:system/bin/gpsd \
-    vendor/samsung/p4/proprietary/bin/nvrm_daemon:system/bin/nvrm_daemon \
     vendor/samsung/p4/proprietary/bin/tegrastats:system/bin/tegrastats \
     vendor/samsung/p4/proprietary/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
     vendor/samsung/p4/proprietary/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
@@ -38,18 +38,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/etc/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_aacdec.axf:system/etc/firmware/nvmm_aacdec.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_adtsdec.axf:system/etc/firmware/nvmm_adtsdec.axf \
-    vendor/samsung/p4/proprietary/etc/firmware/nvmm_h264dec2x.axf:system/etc/firmware/nvmm_h264dec2x.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_h264dec.axf:system/etc/firmware/nvmm_h264dec.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_jpegdec.axf:system/etc/firmware/nvmm_jpegdec.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_jpegenc.axf:system/etc/firmware/nvmm_jpegenc.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_manager.axf:system/etc/firmware/nvmm_manager.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_mp3dec.axf:system/etc/firmware/nvmm_mp3dec.axf \
-    vendor/samsung/p4/proprietary/etc/firmware/nvmm_mpeg2dec.axf:system/etc/firmware/nvmm_mpeg2dec.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_mpeg4dec.axf:system/etc/firmware/nvmm_mpeg4dec.axf \
-    vendor/samsung/p4/proprietary/etc/firmware/nvmm_reference.axf:system/etc/firmware/nvmm_reference.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_service.axf:system/etc/firmware/nvmm_service.axf \
-    vendor/samsung/p4/proprietary/etc/firmware/nvmm_sorensondec.axf:system/etc/firmware/nvmm_sorensondec.axf \
-    vendor/samsung/p4/proprietary/etc/firmware/nvmm_vc1dec_2x.axf:system/etc/firmware/nvmm_vc1dec_2x.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_vc1dec.axf:system/etc/firmware/nvmm_vc1dec.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_wavdec.axf:system/etc/firmware/nvmm_wavdec.axf \
     vendor/samsung/p4/proprietary/etc/firmware/nvmm_wmadec.axf:system/etc/firmware/nvmm_wmadec.axf \
@@ -61,11 +56,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/egl/libEGL_tegra.so:system/lib/egl/libEGL_tegra.so \
     vendor/samsung/p4/proprietary/lib/egl/libGLESv1_CM_tegra.so:system/lib/egl/libGLESv1_CM_tegra.so \
     vendor/samsung/p4/proprietary/lib/egl/libGLESv2_tegra.so:system/lib/egl/libGLESv2_tegra.so \
+    vendor/samsung/p4/proprietary/lib/hw/camera.tegra.so:system/lib/hw/camera.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/gps.tegra.so:system/lib/hw/gps.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/gralloc.tegra.so:system/lib/hw/gralloc.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/hwcomposer.tegra.so:system/lib/hw/hwcomposer.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/lights.p3.so:system/lib/hw/lights.p3.so \
-    vendor/samsung/p4/proprietary/lib/hw/overlay.tegra.so:system/lib/hw/overlay.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/sensors.p3.so:system/lib/hw/sensors.p3.so \
     vendor/samsung/p4/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \
     vendor/samsung/p4/proprietary/lib/libakm.so:system/lib/libakm.so \
@@ -73,7 +68,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/libardrv_dynamic.so:system/lib/libardrv_dynamic.so \
     vendor/samsung/p4/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so \
     vendor/samsung/p4/proprietary/lib/libaudio.so:system/lib/libaudio.so \
-    vendor/samsung/p4/proprietary/lib/libcamera.so:system/lib/libcamera.so \
     vendor/samsung/p4/proprietary/lib/libcgdrv.so:system/lib/libcgdrv.so \
     vendor/samsung/p4/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \
     vendor/samsung/p4/proprietary/lib/libmllite.so:system/lib/libmllite.so \
@@ -83,13 +77,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/libnvasfparserhal.so:system/lib/libnvasfparserhal.so \
     vendor/samsung/p4/proprietary/lib/libnvaviparserhal.so:system/lib/libnvaviparserhal.so \
     vendor/samsung/p4/proprietary/lib/libnvavp.so:system/lib/libnvavp.so \
+    vendor/samsung/p4/proprietary/lib/libnvcamerahdr.so:system/lib/libnvcamerahdr.so \
     vendor/samsung/p4/proprietary/lib/libnvcontrol_jni.so:system/lib/libnvcontrol_jni.so \
     vendor/samsung/p4/proprietary/lib/libnvcpud_client.so:system/lib/libnvcpud_client.so \
     vendor/samsung/p4/proprietary/lib/libnvcpud.so:system/lib/libnvcpud.so \
     vendor/samsung/p4/proprietary/lib/libnvddk_2d.so:system/lib/libnvddk_2d.so \
     vendor/samsung/p4/proprietary/lib/libnvddk_2d_v2.so:system/lib/libnvddk_2d_v2.so \
-    vendor/samsung/p4/proprietary/lib/libnvdispmgr_d.so:system/lib/libnvdispmgr_d.so \
-    vendor/samsung/p4/proprietary/lib/libnvhdmi3dplay_jni.so:system/lib/libnvhdmi3dplay_jni.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_asfparser.so:system/lib/libnvmm_asfparser.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_audio.so:system/lib/libnvmm_audio.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_aviparser.so:system/lib/libnvmm_aviparser.so \
@@ -97,13 +90,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/libnvmm_contentpipe.so:system/lib/libnvmm_contentpipe.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_image.so:system/lib/libnvmm_image.so \
     vendor/samsung/p4/proprietary/lib/libnvmmlite_audio.so:system/lib/libnvmmlite_audio.so \
-    vendor/samsung/p4/proprietary/lib/libnvmmlite_image.so:system/lib/libnvmmlite_image.so \
-    vendor/samsung/p4/proprietary/lib/libnvmmlite_msaudio.so:system/lib/libnvmmlite_msaudio.so \
     vendor/samsung/p4/proprietary/lib/libnvmmlite.so:system/lib/libnvmmlite.so \
     vendor/samsung/p4/proprietary/lib/libnvmmlite_utils.so:system/lib/libnvmmlite_utils.so \
     vendor/samsung/p4/proprietary/lib/libnvmmlite_video.so:system/lib/libnvmmlite_video.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_manager.so:system/lib/libnvmm_manager.so \
-    vendor/samsung/p4/proprietary/lib/libnvmm_misc.so:system/lib/libnvmm_misc.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_msaudio.so:system/lib/libnvmm_msaudio.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_parser.so:system/lib/libnvmm_parser.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_service.so:system/lib/libnvmm_service.so \
@@ -111,7 +101,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/libnvmm_utils.so:system/lib/libnvmm_utils.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_vc1_video.so:system/lib/libnvmm_vc1_video.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_video.so:system/lib/libnvmm_video.so \
-    vendor/samsung/p4/proprietary/lib/libnvmm_vp6_video.so:system/lib/libnvmm_vp6_video.so \
     vendor/samsung/p4/proprietary/lib/libnvmm_writer.so:system/lib/libnvmm_writer.so \
     vendor/samsung/p4/proprietary/lib/libnvodm_dtvtuner.so:system/lib/libnvodm_dtvtuner.so \
     vendor/samsung/p4/proprietary/lib/libnvodm_hdmi.so:system/lib/libnvodm_hdmi.so \
@@ -126,8 +115,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/libnvrm_graphics.so:system/lib/libnvrm_graphics.so \
     vendor/samsung/p4/proprietary/lib/libnvrm.so:system/lib/libnvrm.so \
     vendor/samsung/p4/proprietary/lib/libnvsm.so:system/lib/libnvsm.so \
-    vendor/samsung/p4/proprietary/lib/libnvstereoutils_jni.so:system/lib/libnvstereoutils_jni.so \
-    vendor/samsung/p4/proprietary/lib/libnvsystemuiext_jni.so:system/lib/libnvsystemuiext_jni.so \
     vendor/samsung/p4/proprietary/lib/libnvtestio.so:system/lib/libnvtestio.so \
     vendor/samsung/p4/proprietary/lib/libnvtestresults.so:system/lib/libnvtestresults.so \
     vendor/samsung/p4/proprietary/lib/libnvtvmr.so:system/lib/libnvtvmr.so \
@@ -139,9 +126,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \
     vendor/samsung/p4/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     vendor/samsung/p4/proprietary/lib/lib_Samsung_Sound_Booster.so:system/lib/lib_Samsung_Sound_Booster.so \
-    vendor/samsung/p4/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
-    vendor/samsung/p4/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \
-    vendor/samsung/p4/proprietary/lib/libsecjpegencoder.so:system/lib/libsecjpegencoder.so \
+    vendor/samsung/p4/proprietary/lib/libseccamera_jni.so:system/lib/libseccamera_jni.so \
+    vendor/samsung/p4/proprietary/lib/libseccameracore.so:system/lib/libseccameracore.so \
     vendor/samsung/p4/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
     vendor/samsung/p4/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     vendor/samsung/p4/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
