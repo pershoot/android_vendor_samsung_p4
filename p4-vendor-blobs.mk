@@ -150,3 +150,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
     vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
     vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
+
+# HDMI
+PRODUCT_COPY_FILES += \
+    vendor/samsung/p4/proprietary/hdmi/dectable.dat:system/etc/hdmi/dectable.dat \
+    vendor/samsung/p4/proprietary/hdmi/dectable1.dat:system/etc/hdmi/dectable1.dat
