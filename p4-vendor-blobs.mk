@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES := \
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/bin/gpsd:system/bin/gpsd \
+    vendor/samsung/p4/proprietary/bin/bintvoutservice:system/bin/bintvoutservice \
     vendor/samsung/p4/proprietary/bin/gps.cer:system/bin/gps.cer \
     vendor/samsung/p4/proprietary/bin/macloader:system/bin/macloader \
     vendor/samsung/p4/proprietary/bin/sec_keyboard:system/bin/sec_keyboard \
@@ -133,6 +134,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     vendor/samsung/p4/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     vendor/samsung/p4/proprietary/lib/omxplayer.so:system/lib/omxplayer.so \
+    vendor/samsung/p4/proprietary/lib/libtvoutinterface.so:system/lib/libtvoutinterface.so \
+    vendor/samsung/p4/proprietary/lib/libtvout_jni.so:system/lib/libtvout_jni.so \
+    vendor/samsung/p4/proprietary/lib/libtvoutservice.so:system/lib/libtvoutservice.so \
     vendor/samsung/p4/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
     vendor/samsung/p4/proprietary/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
     vendor/samsung/p4/proprietary/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
