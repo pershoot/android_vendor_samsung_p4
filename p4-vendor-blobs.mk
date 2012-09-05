@@ -18,7 +18,9 @@
 PRODUCT_COPY_FILES := \
     vendor/samsung/p4/proprietary/lib/libarccamera.so:obj/lib/libarccamera.so \
     vendor/samsung/p4/proprietary/lib/libseccamera_jni.so:obj/lib/libseccamera_jni.so \
-    vendor/samsung/p4/proprietary/lib/libseccameracore.so:obj/lib/libseccameracore.so
+    vendor/samsung/p4/proprietary/lib/libseccameracore.so:obj/lib/libseccameracore.so \
+    vendor/samsung/p4/proprietary/lib/libaudio.so:obj/lib/libaudio.so \
+    vendor/samsung/p4/proprietary/lib/libaudiopolicy.so:obj/lib/libaudiopolicy.so 
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/p4/proprietary/bin/gpsd:system/bin/gpsd \
